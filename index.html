@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orion Mercenaries - Guild Wars Reforged Guild</title>
+    <style>
+        /* Base Styling & Theme Colors */
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --text-color: #c9d1d9;
+            --accent-gold: #ffb703;
+            --accent-blue: #2196f3;
+            --border-color: #30363d;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: rgba(22, 27, 34, 0.95);
+            border-bottom: 2px solid var(--accent-gold);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 6rem 2rem;
+            text-align: center;
+            background: linear-gradient(180deg, #161b22 0%, #0d1117 100%);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin: 0 0 1rem 0;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+            color: #8b949e;
+        }
+
+        .btn-cta {
+            background-color: var(--accent-gold);
+            color: #000;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+            display: inline-block;
+        }
+
+        .btn-cta:hover {
+            background-color: #e5a100;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content Grid */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 2rem;
+            transition: border-color 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--accent-gold);
+        }
+
+        .card h3 {
+            color: #fff;
+            margin-top: 0;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--card-bg);
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: #8b949e;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive design tweak */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">Orion Mercenaries</div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#activities">Focus</a>
+                <a href="#join">Apply</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Orion Mercenaries</h1>
+        <p>A dedicated Guild Wars Reforged community built on loyalty, strategy, and conquest. We hunt stars and secure victory.</p>
+        <a href="#join" class="btn-cta">Join Our Ranks</a>
+    </section>
+
+    <main class="container">
+        <section id="about">
+            <h2 style="text-align: center; color: #fff;">Who We Are</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto; color: #8b949e;">
+                Founded under the banner of the hunter, Orion Mercenaries is a tight-knit collective of seasoned fighters and ambitious newcomers alike. Whether roaming the open world, conquering endgame raids, or dominating PvP battlegrounds, we move as a single unit.
+            </p>
+        </section>
+
+        <section id="activities" style="margin-top: 4rem;">
+            <h2 style="text-align: center; color: #fff;">Guild Focus</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>PvE Progress</h3>
+                    <p>From high-tier dungeons to coordinated raid nights. We aim for efficient clears while ensuring every member learns the mechanics.</p>
+                </div>
+                <div class="card">
+                    <h3>Competitive PvP</h3>
+                    <p>Coordinated team compositions, battleground dominance, and structured internal tournaments to sharpen our edge.</p>
+                </div>
+                <div class="card">
+                    <h3>Community First</h3>
+                    <p>No elitism. We provide active Discord voice channels, build theorycrafting workshops, and a helpful environment to grow your character.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="join" style="margin-top: 4rem; text-align: center;">
+            <div class="card" style="max-width: 600px; margin: 0 auto;">
+                <h3>Recruitment is Open</h3>
+                <p>We are actively looking for active, mature players looking for a home in Guild Wars Reforged.</p>
+                <p style="color: var(--accent-gold); font-weight: bold; margin-bottom: 2rem;">Requirements: Discord Account | Active Weekly</p>
+                <!-- Replace the href with your actual Discord invite link -->
+                <a href="https://discord.gg/your-guild-link" target="_blank" class="btn-cta" style="background-color: var(--accent-blue); color: white;">Connect on Discord</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Orion Mercenaries. All rights reserved. Built for Guild Wars Reforged.</p>
+    </footer>
+
+</body>
+</html>
