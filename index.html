@@ -16,14 +16,13 @@
 <body>
     <main class="container">
 
-
-        <!-- nav -->
-        <nav>
+        <!-- logo -->
+        <nav class="title">
             <ul>
                 <li><img src="assets/my-cape.png" alt="[OM]"></li>
                 <li>
                     <hgroup>
-                        <h1 class="title">Orion Mercenaries</h1>
+                        <h1>Orion Mercenaries</h1>
                         <p>Welcome Mercs!</p>
                     </hgroup>
                 </li>
@@ -31,56 +30,28 @@
             <ul>
             </ul>
         </nav>
-        <!-- /nav -->
 
 
-
-        <!-- trade -->
-        <div class="grid">
-            <article>
-                <header><i class="bi bi-bank"></i> Trade Chat</header>
-                <ul>
-                    <li><a target="_blank" rel="noopener noreferrer" href="https://ascalon.gwtoolbox.com/">Ascalon Trade Chat</a> (pre-searing)</li>
-                    <li><a target="_blank" rel="noopener noreferrer" href="https://kamadan.gwtoolbox.com/">Kamadan Trade Chat</a></li>
-                </ul>
-            </article>
-
-            <article>
-                <header><i class="bi bi-hammer"></i> Builds</header>
-                <ul>
-                    <li><a target="_blank" rel="noopener noreferrer" href="https://gwpvx.fandom.com/wiki/PvX_wiki">PvX Wiki</a></li>
-                    <li><a target="_blank" rel="noopener noreferrer" href="https://gwpvx.fandom.com/wiki/Build:Team_-_7_Hero_Beginner_Team">7 Hero Beginner
-                            Team</a>
-                    </li>
-                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.presearing.com/">Pre Searing Builds, Tips & Tricks</a></li>
-                </ul>
-            </article>
-        </div>
-        <!-- /trade -->
+        <!-- nav -->
+        <nav class="nav" hx-target="#tab-contents" hx-on:htmx-after-on-load="selectTab()">
+            <ul>
+                <li><a href="#" hx-get="pages/home.html" aria-selected="true" class="secondary">Home</a></li>
+                <li><a href="#" hx-get="pages/builds.html" aria-selected="false">Builds</a></li>
+            </ul>
+        </nav>
 
 
-        <!-- builds -->
-        <div class="grid">
-            <div></div>
-        </div>
-        <!-- /builds -->
-
-
-        <!-- maps -->
-        <div class="grid">
-            <article>
-                <header><i class="bi bi-globe-americas"></i> Guild Wars Memorial</header>
-                <ul>
-                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.gw-memorial.net/interactive-maps/">Interacive Maps</a></li>
-                    <li><a target="_blank" rel="noopener noreferrer" href="https://www.gw-memorial.net/templateDecoder/">Template Decoder</a></li>
-                </ul>
-            </article>
-            <div></div>
-        </div>
-        <!-- /mapss -->
-
+        <!-- content -->
+        <div id="tab-contents" hx-get="pages/home.html" hx-trigger="load"></div>
 
     </main>
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.10/dist/htmx.min.js"
+        integrity="sha384-H5SrcfygHmAuTDZphMHqBJLc3FhssKjG7w/CeCpFReSfwBWDTKpkzPP8c+cLsK+V"
+        crossorigin="anonymous"></script>
+    <script src="site.js"></script>
+
 </body>
 
 </html>
