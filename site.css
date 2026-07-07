@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url("assets/bg1.png");
+    background-image: url("assets/bg1-sm.png");
     background-color: #cccccc;
     background-repeat: no-repeat;
     background-size: cover;
@@ -23,4 +23,20 @@ body {
 
 .nav a {
     font-size: 130%;
+}
+
+table.build {
+    table-layout: fixed;
+}
+
+table.build td {
+    vertical-align: top;
+}
+
+table.build img {
+    width: 1.5rem;
+}
+
+p.hlist {
+    margin-bottom: 0;
 }
