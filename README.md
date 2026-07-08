@@ -2,6 +2,8 @@
 
 Static website compiled using [staticjinja](https://github.com/staticjinja/staticjinja)
 
+[Orion Mercenaris](https://orion-mercenaries.github.io/site/)
+
 ## Requirements
 
 - Python 3
