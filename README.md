@@ -15,6 +15,11 @@ pip install -r requirements.txt
 staticjinja watch
 ```
 
+## Serve Static Files
+```
+python -m http.server
+```
+
 ## Deploy
 
 The site is deployed using Github Pages.

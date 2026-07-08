@@ -4,14 +4,17 @@
     --pico-grid-row-gap: 0;
 }
 
-body {
+html {
     background-image: url("/assets/images/bg1-sm.png");
     background-color: #cccccc;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    min-height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
 }
 
 .title li {
