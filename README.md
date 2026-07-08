@@ -17,7 +17,7 @@ pip install -r requirements.txt
 staticjinja watch
 ```
 
-## Serve Static Files
+## Serve
 ```
 python -m http.server
 ```
@@ -29,5 +29,5 @@ The site is deployed using Github Pages.
 To deploy, simple run the following command and then commit and push to main branch.
 
 ```
-staticjinja build
+python build.py
 ```
