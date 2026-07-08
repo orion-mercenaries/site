@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url("assets/bg1-sm.png");
+    background-image: url("/assets/images/bg1-sm.png");
     background-color: #cccccc;
     background-repeat: no-repeat;
     background-size: cover;

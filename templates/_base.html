@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 
@@ -37,19 +36,19 @@
         <nav class="nav">
             <ul>
                 <li>
-                    <button 
+                    <button {% if selected_tab !='home' %}class="secondary" {% endif %}
                         onclick="window.location.href='/'">
                         <i class="bi bi-house-door"></i> Home
                     </button>
                 </li>
                 <li>
-                    <button class="secondary" 
+                    <button {% if selected_tab !='builds' %}class="secondary" {% endif %}
                         onclick="window.location.href='/builds/'">
                         <i class="bi bi-hammer"></i> Builds
                     </button>
                 </li>
                 <li>
-                    <button class="secondary" 
+                    <button {% if selected_tab !='resources' %}class="secondary" {% endif %}
                         onclick="window.location.href='/resources/'">
                         <i class="bi bi-folder-symlink"></i> Resources
                     </button>
@@ -59,36 +58,8 @@
 
 
         <!-- content -->
-        
-<div class="grid">
-    <div>
-        <article>
-            Welcome!!!
-        </article>
-    </div>
-    <div>
-        <article>
-            <header><i class="bi bi-link-45deg"></i> Links</header>
-            <ul>
-                <li><a target="_blank" rel="noopener noreferrer" href="https://ascalon.gwtoolbox.com/">Ascalon Trade
-                        Chat</a> (pre-searing)</li>
-                <li><a target="_blank" rel="noopener noreferrer" href="https://kamadan.gwtoolbox.com/">Kamadan Trade
-                        Chat</a></li>
-                <br />
-                <li><a target="_blank" rel="noopener noreferrer" href="https://gwpvx.fandom.com/wiki/PvX_wiki">PvX
-                        Wiki</a></li>
-                <li><a target="_blank" rel="noopener noreferrer" href="https://www.presearing.com/">PreSearing</a></li>
-                <li><a target="_blank" rel="noopener noreferrer"
-                        href="https://www.gw-memorial.net/interactive-maps/">Interacive Maps</a></li>
-                <li><a target="_blank" rel="noopener noreferrer"
-                        href="https://www.gw-memorial.net/templateDecoder/">Template Decoder</a></li>
-                <li><a target="_blank" rel="noopener noreferrer" href="https://www.gw1builds.com/">GW1 Builds</a>
-                </li>
-            </ul>
-        </article>
-    </div>
-</div>
-
+        {% block content %}
+        {% endblock %}
 
     </main>
 
