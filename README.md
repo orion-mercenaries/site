@@ -14,7 +14,7 @@ Static website compiled using [staticjinja](https://github.com/staticjinja/stati
 python -m venv ve
 source ve/Scripts/activate
 pip install -r requirements.txt
-staticjinja watch
+python watch.py
 ```
 
 ## Serve
