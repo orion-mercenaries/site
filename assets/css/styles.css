@@ -49,3 +49,7 @@ table.build img {
 p.hlist {
     margin-bottom: 0;
 }
+
+a.copy-to-clipboard {
+    margin-left: 0.5rem;
+}
