@@ -1,0 +1,97 @@
+{% set selected_tab = "builds" %}
+{% extends "_base.html" %}
+
+{% block content %}
+<article>
+    <header>
+        <nav class="builds" aria-label="breadcrumb">
+            <ul>
+                <li><a href="{{ BASE_URL }}builds/">Builds</a></li>
+                <li>7 Hero Beginner Build - Final Skill Set</li>
+            </ul>
+        </nav>
+    </header>
+
+    <h4>Introduction</h4>
+
+    <p>This is the final skill set for the 7 Hero Beginner build. The original build can be found <a target="_blank"
+            rel="noopener noreferrer" href="https://gwpvx.fandom.com/wiki/Build:Team_-_7_Hero_Beginner_Team">here</a>.
+    </p>
+
+    <h4>Build Overview</h4>
+
+    <table class="build">
+        <thead>
+            <th>Hero</th>
+            <th>Template Code</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="{{ BASE_URL }}assets/images/icon-necromancer.png">/<img
+                        src="{{ BASE_URL }}assets/images/icon-mesmer.png"> Master of Whispers
+                </td>
+                <td>
+                    {% with TEMPLATE_CODE="OAVTI2yaw5EgTNdDhcQVtKgGAA" %}
+                    {% include "_template_code.html" %}
+                    {% endwith %}
+                </td>
+            </tr>
+            <tr>
+                <td><img src="{{ BASE_URL }}assets/images/icon-elementalist.png">/<img
+                        src="{{ BASE_URL }}assets/images/icon-mesmer.png"> Vekk
+                </td>
+                <td>
+                    {% with TEMPLATE_CODE="OgVTI4xys5EgTNdTvcQGgIoBAA" %}
+                    {% include "_template_code.html" %}
+                    {% endwith %}
+                </td>
+            </tr>
+            <tr>
+                <td><img src="{{ BASE_URL }}assets/images/icon-mesmer.png">/<i class="bi bi-asterisk"></i> Norgu</td>
+                <td>
+                    {% with TEMPLATE_CODE="OQBTAUBPw5EgTNdTvcQGgIoBA" %}
+                    {% include "_template_code.html" %}
+                    {% endwith %}
+                </td>
+            </tr>
+            <tr>
+                <td><img src="{{ BASE_URL }}assets/images/icon-mesmer.png">/<img
+                        src="{{ BASE_URL }}assets/images/icon-ritualist.png"> Gwen</td>
+                <td>
+                    {% with TEMPLATE_CODE="OQhTAUBPw5EgTNdTvcQGoIcxAA" %}
+                    {% include "_template_code.html" %}
+                    {% endwith %}
+                </td>
+            </tr>
+            <tr>
+                <td><img src="{{ BASE_URL }}assets/images/icon-necromancer.png">/<img
+                        src="{{ BASE_URL }}assets/images/icon-ritualist.png"> Olias
+                </td>
+                <td>
+                    {% with TEMPLATE_CODE="OAhkQgG6hEyzdwOUVlmTuh548iB" %}
+                    {% include "_template_code.html" %}
+                    {% endwith %}
+                </td>
+            </tr>
+            <tr>
+                <td><img src="{{ BASE_URL }}assets/images/icon-monk.png">/<img
+                        src="{{ BASE_URL }}assets/images/icon-mesmer.png"> Tahlkora</td>
+                <td>
+                    {% with TEMPLATE_CODE="OwUUMu2+U4RaENg1DBE3VTfbaZAA" %}
+                    {% include "_template_code.html" %}
+                    {% endwith %}
+                </td>
+            </tr>
+            <tr>
+                <td><img src="{{ BASE_URL }}assets/images/icon-monk.png">/<img
+                        src="{{ BASE_URL }}assets/images/icon-mesmer.png"> Dunkoro</td>
+                <td>
+                    {% with TEMPLATE_CODE="OwUUMu2+U4RaENg1DBE3VTfbaZAA" %}
+                    {% include "_template_code.html" %}
+                    {% endwith %}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</article>
+{% endblock %}

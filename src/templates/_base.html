@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.pumpkin.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{{ BASE_URL }}assets/css/styles.css">
+    <title>Orion Mercenaries</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+    <main class="container">
+
+        <!-- logo -->
+        <nav class="title">
+            <ul>
+                <li><img src="{{ BASE_URL }}assets/images/my-cape.png" alt="[OM]"></li>
+                <li>
+                    <hgroup>
+                        <h1>Orion Mercenaries</h1>
+                        <p>Welcome Mercs!</p>
+                    </hgroup>
+                </li>
+            </ul>
+            <ul>
+            </ul>
+        </nav>
+
+
+        <!-- nav -->
+        <nav class="nav">
+            <ul>
+                <li>
+                    <button {% if selected_tab !='home' %}class="secondary" {% endif %}
+                        onclick="window.location.href='{{ BASE_URL }}'">
+                        <i class="bi bi-house-door"></i> Home
+                    </button>
+                </li>
+                <li>
+                    <button {% if selected_tab !='builds' %}class="secondary" {% endif %}
+                        onclick="window.location.href='{{ BASE_URL }}builds/'">
+                        <i class="bi bi-hammer"></i> Builds
+                    </button>
+                </li>
+                <li>
+                    <button {% if selected_tab !='resources' %}class="secondary" {% endif %}
+                        onclick="window.location.href='{{ BASE_URL }}resources/'">
+                        <i class="bi bi-folder-symlink"></i> Resources
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+
+        <!-- content -->
+        {% block content %}
+        {% endblock %}
+
+    </main>
+
+    <!-- scripts -->
+    <script src="{{ BASE_URL }}assets/js/site.js"></script>
+
+</body>
+
+</html>
