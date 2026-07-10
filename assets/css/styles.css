@@ -46,10 +46,26 @@ table.build img {
     width: 1.5rem;
 }
 
+table.build-card {
+    font-size: 0.9rem;
+}
+
+table.build-card img {
+    width: 1.5rem;
+}
+
+table.build-card h5, p, ul {
+    margin-bottom: 0.6rem;
+}
+
 p.hlist {
     margin-bottom: 0;
 }
 
 a.copy-to-clipboard {
     margin-left: 0.5rem;
+}
+
+a.skill img {
+    width: 3rem;
 }
