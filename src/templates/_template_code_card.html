@@ -2,18 +2,19 @@
     <tbody>
         <tr>
             <td>
-                <h6>{{ tc_data["title"] }}</h6>
+                <h5>{{ tc_data["title"] }}</h5>
                 <p>
                     {{ tc_data['primary_profession'] }} <img
-                        src="{{ BASE_URL }}assets/images/icon-{{ tc_data['primary_profession'] | lower }}.png">/<img
-                        src="{{ BASE_URL }}assets/images/icon-{{ tc_data['secondary_profession'] | lower }}.png">
-                    {{ tc_data['secondary_profession'] }}
+                        src="{{ BASE_URL }}assets/images/icon-{{ tc_data['primary_profession'] | lower }}.png">
+                    {% if tc_data['secondary_profession'] != 'None' %}
+                    /<img src="{{ BASE_URL }}assets/images/icon-{{ tc_data['secondary_profession'] | lower }}.png">
+                    {{ tc_data['secondary_profession'] }} {% endif %}
                 </p>
 
                 <p>
-                {% for skill in tc_data['skills'] %}
-                {% include "_skill_link.html" %}
-                {% endfor %}
+                    {% for skill in tc_data['skills'] %}
+                    {% include "_skill_link.html" %}
+                    {% endfor %}
                 </p>
 
                 <p class="hlist">Attributes</p>

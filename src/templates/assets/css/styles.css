@@ -54,7 +54,7 @@ table.build-card img {
     width: 1.5rem;
 }
 
-table.build-card h6, p, ul {
+table.build-card h5, p, ul {
     margin-bottom: 0.6rem;
 }
 

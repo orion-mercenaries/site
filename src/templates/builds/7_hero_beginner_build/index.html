@@ -21,80 +21,33 @@
 
     <h4>Build Overview</h4>
 
-    <table class="build">
-        <thead>
-            <th>Hero</th>
-            <th>Template Code</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td><img src="{{ BASE_URL }}assets/images/icon-elementalist.png">/<img
-                        src="{{ BASE_URL }}assets/images/icon-mesmer.png"> Acolyte
-                    Sousuke</td>
-                <td>
-                    {% with template_code="OgVTI4xysRAgTNdTvcQGgIoBA" %}
-                    {% include "_template_code.html" %}
-                    {% endwith %}
-                </td>
-            </tr>
-            <tr>
-                <td><img src="{{ BASE_URL }}assets/images/icon-elementalist.png">/<img
-                        src="{{ BASE_URL }}assets/images/icon-mesmer.png"> Vekk
-                </td>
-                <td>
-                    {% with template_code="OgVTI4xysRAgTNdTvcQGgIoBA" %}
-                    {% include "_template_code.html" %}
-                    {% endwith %}
-                </td>
-            </tr>
-            <tr>
-                <td><img src="{{ BASE_URL }}assets/images/icon-dervish.png">/<img
-                        src="{{ BASE_URL }}assets/images/icon-mesmer.png"> Melonni</td>
-                <td>
-                    {% with template_code="OgWjIwDLrNDBcqpb6lDyAEBNA" %}
-                    {% include "_template_code.html" %}
-                    {% endwith %}
-                </td>
-            </tr>
-            <tr>
-                <td><img src="{{ BASE_URL }}assets/images/icon-mesmer.png">/<img
-                        src="{{ BASE_URL }}assets/images/icon-monk.png"> Gwen</td>
-                <td>
-                    {% with template_code="OQNTAUBPwZIgTNdTvcQGgIETA" %}
-                    {% include "_template_code.html" %}
-                    {% endwith %}
-                </td>
-            </tr>
-            <tr>
-                <td><img src="{{ BASE_URL }}assets/images/icon-necromancer.png">/<img
-                        src="{{ BASE_URL }}assets/images/icon-mesmer.png"> Olias
-                </td>
-                <td>
-                    {% with template_code="OAVTI0CbQqK4oy0BNIHoqaLUAA" %}
-                    {% include "_template_code.html" %}
-                    {% endwith %}
-                </td>
-            </tr>
-            <tr>
-                <td><img src="{{ BASE_URL }}assets/images/icon-monk.png">/<img
-                        src="{{ BASE_URL }}assets/images/icon-mesmer.png"> Tahlkora</td>
-                <td>
-                    {% with template_code="OwUUMwG/OIS3NNg1DBE3VVETfZAA" %}
-                    {% include "_template_code.html" %}
-                    {% endwith %}
-                </td>
-            </tr>
-            <tr>
-                <td><img src="{{ BASE_URL }}assets/images/icon-monk.png">/<img
-                        src="{{ BASE_URL }}assets/images/icon-mesmer.png"> Dunkoro</td>
-                <td>
-                    {% with template_code="OwUUMwG/OIS3NNg1DBE3VZETfZAA" %}
-                    {% include "_template_code.html" %}
-                    {% endwith %}
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    {% with tc_data = decode_gw1_template("OgVTI4xysRAgTNdTvcQGgIoBA", "Acolyte Sousuke") %}
+    {% include "_template_code_card.html" %}
+    {% endwith %}
+
+    {% with tc_data = decode_gw1_template("OgVTI4xysRAgTNdTvcQGgIoBA", "Vekk") %}
+    {% include "_template_code_card.html" %}
+    {% endwith %}
+
+    {% with tc_data = decode_gw1_template("OgWjIwDLrNDBcqpb6lDyAEBNA", "Melonni") %}
+    {% include "_template_code_card.html" %}
+    {% endwith %}
+
+    {% with tc_data = decode_gw1_template("OQNTAUBPwZIgTNdTvcQGgIETA", "Gwen") %}
+    {% include "_template_code_card.html" %}
+    {% endwith %}
+
+    {% with tc_data = decode_gw1_template("OAVTI0CbQqK4oy0BNIHoqaLUAA", "Olias") %}
+    {% include "_template_code_card.html" %}
+    {% endwith %}
+
+    {% with tc_data = decode_gw1_template("OwUUMwG/OIS3NNg1DBE3VVETfZAA", "Tahlkora") %}
+    {% include "_template_code_card.html" %}
+    {% endwith %}
+
+    {% with tc_data = decode_gw1_template("OwUUMwG/OIS3NNg1DBE3VZETfZAA", "Dunkoro") %}
+    {% include "_template_code_card.html" %}
+    {% endwith %}
 
     <h4>Preparation</h4>
 
