@@ -24,25 +24,5 @@
     {% with tc_data = decode_gw1_template("OQQSU4DPVhjKVAPYHqqBABA", "Devona") %}
     {% include "_template_code_card.html" %}
     {% endwith %}
-
-
-    <table class="build">
-        <thead>
-            <th>Hero</th>
-            <th>Template Code</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td><img src="{{ BASE_URL }}assets/images/icon-warrior.png">/<img
-                        src="{{ BASE_URL }}assets/images/icon-necromancer.png"> Devona
-                </td>
-                <td>
-                    {% with template_code = "OQQSU4DPVhjKVAPYHqqBABA" %}
-                    {% include "_template_code.html" %}
-                    {% endwith %}
-                </td>
-            </tr>
-        </tbody>
-    </table>
 </article>
 {% endblock %}

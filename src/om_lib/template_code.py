@@ -1,4 +1,4 @@
-from markupsafe import Markup
+from om_lib.skills import SKILLS
 
 # Mapping tables based on the official Guild Wars 1 Wiki specification
 PROFESSIONS = [
@@ -155,6 +155,10 @@ def decode_gw1_template(template_code, title):
             skill_id = reader.read(bits_per_skill_id)
             skill_ids.append(skill_id)
 
+        skills = []
+        for skill_id in skill_ids:
+            skills.append(SKILLS.get(skill_id, "No Skill"))
+
         return {
             "title": title,
             "template_code": template_code,
@@ -164,6 +168,7 @@ def decode_gw1_template(template_code, title):
             "secondary_profession": secondary_prof,
             "attributes": attributes,
             "skill_ids": skill_ids,
+            "skills": skills,
         }
 
     except Exception as e:

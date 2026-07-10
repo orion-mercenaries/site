@@ -10,6 +10,12 @@
                     {{ tc_data['secondary_profession'] }}
                 </p>
 
+                <p>
+                {% for skill in tc_data['skills'] %}
+                {% include "_skill_link.html" %}
+                {% endfor %}
+                </p>
+
                 <p class="hlist">Attributes</p>
                 <ul>
                     {% for key, value in tc_data['attributes'].items() %}
