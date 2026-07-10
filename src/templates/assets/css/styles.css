@@ -46,6 +46,18 @@ table.build img {
     width: 1.5rem;
 }
 
+table.build-card {
+    font-size: 0.8rem;
+}
+
+table.build-card img {
+    width: 1.5rem;
+}
+
+table.build-card h6, p, ul {
+    margin-bottom: 0.5rem;
+}
+
 p.hlist {
     margin-bottom: 0;
 }
