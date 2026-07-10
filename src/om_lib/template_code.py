@@ -93,7 +93,7 @@ class GuildWarsBitReader:
         return val
 
 
-def decode_gw1_template(template_code):
+def decode_gw1_template(template_code, title):
     try:
         reader = GuildWarsBitReader(template_code)
 
@@ -156,6 +156,8 @@ def decode_gw1_template(template_code):
             skill_ids.append(skill_id)
 
         return {
+            "title": title,
+            "template_code": template_code,
             "template_type": template_type,
             "version": version,
             "primary_profession": primary_prof,
@@ -168,44 +170,3 @@ def decode_gw1_template(template_code):
         return {
             "error": f"Failed to decode template due to unexpected structure: {str(e)}"
         }
-
-
-def render_template_code(code, name, base_url):
-    """
-    Decodes and renders a Guild Wars template code.
-
-    Assets for skill icons are pulled from the Guild Wars Wiki page.
-    """
-    template_data = decode_gw1_template(code)
-
-    if "error" in template_data:
-        return Markup(f"<p>{template_data["error"]}</p>")
-
-    atribute_string = ""
-    for k, v in template_data["attributes"].items():
-        atribute_string += f"<li>{k} - <ins>{v}</ins></li>"
-
-    html_string = f"""
-    <table class="build-card">
-        <tbody>
-            <tr>
-                <td>
-                    <h6>{name}</h6>
-                    <p>
-                        {template_data['primary_profession']} <img src="{base_url}assets/images/icon-{template_data['primary_profession'].lower()}.png">/<img
-                            src="{base_url}assets/images/icon-{template_data['secondary_profession'].lower()}.png"> {template_data['secondary_profession']}
-                    </p>
-
-                    <p class="hlist">Attributes</p>
-                    <ul>
-                        {atribute_string}
-                    </ul>
-
-                    {code}
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    """
-
-    return Markup(html_string)

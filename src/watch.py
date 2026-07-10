@@ -1,7 +1,7 @@
 from staticjinja import Site
 from livereload import Server
 
-from om_lib.template_code import render_template_code
+from om_lib.template_code import decode_gw1_template
 
 # Initialize staticjinja Site (pointing to a 'templates' directory and outputting to 'build')
 site = Site.make_site(
@@ -10,7 +10,7 @@ site = Site.make_site(
     staticpaths=["assets", "robots.txt", "favicon.ico"],
     env_globals={
         "BASE_URL": "/",
-        "render_template_code": render_template_code,
+        "decode_gw1_template": decode_gw1_template,
     },
 )
 

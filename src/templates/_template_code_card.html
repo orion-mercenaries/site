@@ -1,0 +1,26 @@
+<table class="build-card">
+    <tbody>
+        <tr>
+            <td>
+                <h6>{{ tc_data["title"] }}</h6>
+                <p>
+                    {{ tc_data['primary_profession'] }} <img
+                        src="{{ BASE_URL }}assets/images/icon-{{ tc_data['primary_profession'] | lower }}.png">/<img
+                        src="{{ BASE_URL }}assets/images/icon-{{ tc_data['secondary_profession'] | lower }}.png">
+                    {{ tc_data['secondary_profession'] }}
+                </p>
+
+                <p class="hlist">Attributes</p>
+                <ul>
+                    {% for key, value in tc_data['attributes'].items() %}
+                    <li>{{ key }} - <ins>{{ value }}</ins></li>
+                    {% endfor %}
+                </ul>
+
+                {% with template_code = tc_data["template_code"] %}
+                {% include "_template_code.html" %}
+                {% endwith %}
+            </td>
+        </tr>
+    </tbody>
+</table>
