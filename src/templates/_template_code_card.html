@@ -1,4 +1,4 @@
-<table class="build-card">
+<table class="template_code_card">
     <tbody>
         <tr>
             <td>
@@ -11,11 +11,11 @@
                     {{ tc_data['secondary_profession'] }} {% endif %}
                 </p>
 
-                <p>
+                <div class="skills">
                     {% for skill in tc_data['skills'] %}
                     {% include "_skill_link.html" %}
                     {% endfor %}
-                </p>
+                </div>
 
                 <p class="hlist">Attributes</p>
                 <ul>

@@ -46,18 +46,6 @@ table.build img {
     width: 1.5rem;
 }
 
-table.build-card {
-    font-size: 0.9rem;
-}
-
-table.build-card img {
-    width: 1.5rem;
-}
-
-table.build-card h5, p, ul {
-    margin-bottom: 0.6rem;
-}
-
 p.hlist {
     margin-bottom: 0;
 }
@@ -66,6 +54,35 @@ a.copy-to-clipboard {
     margin-left: 0.5rem;
 }
 
-a.skill img {
+/*
+ * template code card
+ */
+table.template_code_card {
+    font-size: 0.9rem;
+}
+
+table.template_code_card h5,
+p,
+ul {
+    margin-bottom: 0.6rem;
+}
+
+table.template_code_card img {
+    width: 1.5rem;
+}
+
+table.template_code_card .skills {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.3rem;
+}
+
+table.template_code_card a.skill img {
     width: 3rem;
+    margin-bottom: 0.6rem;
+}
+
+.om-card {
+    border: var(--pico-border-width) solid var(--pico-secondary-border);
+    border-radius: var(--pico-border-radius);
 }
