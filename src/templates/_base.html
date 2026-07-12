@@ -36,22 +36,19 @@
         <nav class="nav">
             <ul>
                 <li>
-                    <button {% if selected_tab !='home' %}class="secondary" {% endif %}
-                        onclick="window.location.href='{{ BASE_URL }}'">
+                    <a {% if selected_tab !='home' %}class="secondary" {% endif %} href="{{ BASE_URL }}" role="button">
                         <i class="bi bi-house-door"></i> Home
-                    </button>
+                    </a>
                 </li>
                 <li>
-                    <button {% if selected_tab !='builds' %}class="secondary" {% endif %}
-                        onclick="window.location.href='{{ BASE_URL }}builds/'">
+                    <a {% if selected_tab !='builds' %}class="secondary" {% endif %} href="{{ BASE_URL }}builds/" role="button">
                         <i class="bi bi-hammer"></i> Builds
-                    </button>
+                    </a>
                 </li>
                 <li>
-                    <button {% if selected_tab !='resources' %}class="secondary" {% endif %}
-                        onclick="window.location.href='{{ BASE_URL }}resources/'">
+                    <a {% if selected_tab !='resources' %}class="secondary" {% endif %} href="{{ BASE_URL }}resources/" role="button">
                         <i class="bi bi-folder-symlink"></i> Resources
-                    </button>
+                    </a>
                 </li>
             </ul>
         </nav>
