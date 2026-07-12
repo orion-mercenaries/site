@@ -25,10 +25,6 @@ html {
     color: black;
 }
 
-nav.nav a {
-    font-size: 130%;
-}
-
 nav.builds li {
     padding-top: 0;
     padding-bottom: 0;
