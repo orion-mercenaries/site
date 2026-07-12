@@ -1,0 +1,55 @@
+{% set selected_tab = "builds" %}
+{% extends "_base.html" %}
+
+{% block content %}
+<article>
+    <header>
+        <nav class="builds" aria-label="breadcrumb">
+            <ul>
+                <li><a href="{{ BASE_URL }}builds/">Builds</a></li>
+                <li>Presearing - Devona Spirit Spammer</li>
+            </ul>
+        </nav>
+    </header>
+
+    <h4>Introduction</h4>
+
+    <p>
+        Turning Devona into a spirit spammer is great for presearing. The skills can also be easily unlocked on a new
+        account.
+    </p>
+
+    <p>To unlock the skills on a new account, start a new Factions Ritualist character and proceed with the campaign until you get to <a
+            href="https://wiki.guildwars.com/wiki/Kaineng_Center">Kaineng Center</a>. (Once you reach <a
+            href="https://wiki.guildwars.com/wiki/The_Marketplace">The Marketplace</a> you can simply follow the western
+        coastline north across <a href="https://wiki.guildwars.com/wiki/Bukdek_Byway">Bukdek Byway</a>.)</p>
+
+    <p>Once in Kaineng Center, go to the Skill Trainer and purchace the following skills (remember to save skill points for this while leveling):</p>
+
+    <ul>
+        <li>Painful Bond</li>
+        <li>Pain</li>
+        <li>Shadow Song</li>
+        <li>BloodSong</li>
+        <li>Armor of Unfeeling</li>
+        <li>Spirit Siphon</li>
+        <li>Union</li>
+        <li>Flesh of My Flesh</li>
+    </ul>
+
+    <h4>Build Overview</h4>
+
+    {% with tc_data = decode_gw1_template("OQgjAyhjIPVzv5Zrc+4gmMzLGA", "Devona") %}
+    {% include "_template_code_card.html" %}
+    {% endwith %}
+
+    <h4>Advanced Version</h4>
+
+    <p>If you have unlocked signet of spirits, then Devona becomes even more powerful. We also replace union with summon
+        spirits.</p>
+
+    {% with tc_data = decode_gw1_template("OQgjAyhjITVTXTnNlTDgQTMTXMA", "Devona - Advanced") %}
+    {% include "_template_code_card.html" %}
+    {% endwith %}
+</article>
+{% endblock %}
