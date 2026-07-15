@@ -27,3 +27,10 @@ To deploy, simple run the following command and then commit and push to main bra
 ```
 python build.py
 ```
+
+## Useful Resources
+
+- [PvX Wiki](https://gwpvx.fandom.com/wiki/PvX_wiki)
+- [GW1 BUilds](https://www.gw1builds.com/)
+- [GW Memorial Template Decoder](https://www.gw-memorial.net/templateDecoder/)
+- [GW Memorial Interacive Maps](https://www.gw-memorial.net/interactive-maps/)
