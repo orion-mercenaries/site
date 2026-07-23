@@ -1,0 +1,79 @@
+{% set selected_tab = "builds" %}
+{% extends "_base.html" %}
+
+{% block content %}
+<article>
+    <header>
+        <nav class="builds" aria-label="breadcrumb">
+            <ul>
+                <li><a href="{{ BASE_URL }}builds/">Builds</a></li>
+                <li>7 Hero Mesmer Way (Melee Players)</li>
+            </ul>
+        </nav>
+    </header>
+
+    <h4>Introduction</h4>
+
+    <p>Standard mesmerway team composition suitable for all general HM content and elite areas. Blood is Power fuels the
+        mesmer midline while a Soul Twisting ritualist provides party-wide protection.The original build can be found <a
+            target="_blank" rel="noopener noreferrer"
+            href="https://gwpvx.fandom.com/wiki/Build:Team_-_7_Hero_Mesmerway">here</a>.
+    </p>
+
+    <h4>Build Overview</h4>
+
+    {% with tc_data = decode_gw1_template("OQBTAWBPshGkDmemuhAONDQEAA", "Norgu - Domination Mesmer") %}
+    {% include "_template_code_card.html" %}
+    {% endwith %}
+
+    {% with tc_data = decode_gw1_template("OQhTAWBPs5EkDmemuhAONDcxAA", "Gwen - Domination Mesmer") %}
+    {% include "_template_code_card.html" %}
+    {% endwith %}
+
+    {% with tc_data = decode_gw1_template("OQhTAWBPs5EkDmemuhAONDcxAA", "Althea - Domination Mesmer") %}
+    {% include "_template_code_card.html" %}
+    {% endwith %}
+
+    {% with tc_data = decode_gw1_template("OAljUwGpZS8Y7Y1YVVUBKgbhNfA", "Livia - Minion Master") %}
+    {% include "_template_code_card.html" %}
+    {% endwith %}
+
+    {% with tc_data = decode_gw1_template("OAhjQkGZIP3hhmwrqKNncDzqH", "Olias - BiP Resto") %}
+    {% include "_template_code_card.html" %}
+    {% endwith %}
+
+    {% with tc_data = decode_gw1_template("OACjEyiM5MXTvJzEjJNncDzxJA", "Xandra - SoS Resto") %}
+    {% include "_template_code_card.html" %}
+    {% endwith %}
+
+    {% with tc_data = decode_gw1_template("OAOj4ggMpOYTr3jLcCNdmWz5BA", "Razah - Soul Twisting Prot") %}
+    {% include "_template_code_card.html" %}
+    {% endwith %}
+
+    <!-- <h4>Gear</h4>
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    Mesmers
+                </td>
+                <td>
+                    <ul>
+                        <li>Domination Magic +1 +3</li>
+                        <li>Fast Casting +2</li>
+                        <li>Inspiration Magic +1</li>
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        <li>Rune of Superior Vigor</li>
+                        <li>Rune of Vitae</li>
+                        <li>5 Prodigy's Insignias</li>
+                        <li>40/40 Domination Magic</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table> -->
+</article>
+{% endblock %}

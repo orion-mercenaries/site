@@ -1,10 +1,12 @@
 {% if skill != "No Skill" %}
-<a class="skill" target="_blank" rel="noopener noreferrer"
-    href="https://wiki.guildwars.com/wiki/{{ skill | replace(' ', '_') }}" data-tooltip="{{ skill }}">
-    <img src="https://www.gw-memorial.net/img/skills-icon64/{{ skill | replace(' ', '_') }}">
+{% with clean_skill = skill.replace('"', '').replace(' ', '_') %}
+<a class="skill" target="_blank" rel="noopener noreferrer" href="https://wiki.guildwars.com/wiki/{{ clean_skill }}"
+    data-tooltip="{{ skill }}">
+    <img src="https://www.gw-memorial.net/img/skills-icon64/{{ clean_skill }}">
 </a>
+{% endwith %}
 {% endif %}
 
 {% if skill == "No Skill" %}
- <a class="skill"><img src="https://www.gw-memorial.net/img/skills-icon64/0.png"></a>
+<a class="skill"><img src="https://www.gw-memorial.net/img/skills-icon64/0.png"></a>
 {% endif %}
