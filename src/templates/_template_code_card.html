@@ -24,7 +24,7 @@
                     {% endfor %}
                 </ul>
 
-                {% with template_code = tc_data["template_code"] %}
+                {% with template_code = tc_data["template_code"], title = tc_data["title"] %}
                 {% include "_template_code.html" %}
                 {% endwith %}
             </td>

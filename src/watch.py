@@ -1,13 +1,20 @@
+import os
+import glob
+
 from staticjinja import Site
 from livereload import Server
 
 from om_lib.template_code import decode_gw1_template
 
+# Collect paths to static assets using a wildcard
+favicon_paths = glob.glob('templates/**/favicon.ico', recursive=True)
+favicons = [os.path.relpath(x, 'templates') for x in favicon_paths]
+
 # Initialize staticjinja Site (pointing to a 'templates' directory and outputting to 'build')
 site = Site.make_site(
     searchpath="templates",
     outpath="build",
-    staticpaths=["assets", "robots.txt", "favicon.ico"],
+    staticpaths=["assets", "robots.txt", *favicons],
     env_globals={
         "BASE_URL": "/",
         "decode_gw1_template": decode_gw1_template,
