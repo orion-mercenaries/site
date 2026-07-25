@@ -1,0 +1,82 @@
+{% set selected_tab = "builds" %}
+{% extends "_base.html" %}
+
+{% block content %}
+<article>
+    <header>
+        <nav class="builds" aria-label="breadcrumb">
+            <ul>
+                <li><a href="{{ BASE_URL }}builds/">Builds</a></li>
+                <li>7 Hero Leveling Build</li>
+            </ul>
+        </nav>
+    </header>
+
+    <h4>Introduction</h4>
+
+    <p>This build is ideal for new camplaign playthroughs where the player already unlocked a lot of skills for heroes.
+        The idea is to swap out heroes as needed as you unlock heroes throught the campaign playthrough.
+    </p>
+
+    <p>In the end the build should look something like this:</p>
+
+    <ul>
+        <li>4 x Domination Mesmers</li>
+        <li>2 x Healers</li>
+        <li>1 x BiP Necro</li>
+        <li>1 x SoS Spirit Spammer</li>
+    </ul>
+
+    <h4>Mesmers</h4>
+
+    {% with tc_data = decode_gw1_template("OQhTAWBPs5EkDmemuhAONDQEAA", "Domination Mesmer - Drain Enchantment") %}
+    {% include "_template_code_card.html" %}
+    {% endwith %}
+
+    {% with tc_data = decode_gw1_template("OQhTAWBPs5EkDmemuhAONDcxAA", "Domination Mesmer") %}
+    {% include "_template_code_card.html" %}
+    {% endwith %}
+
+    {% with tc_data = decode_gw1_template("OgVTI4xys5EgTNdTvcQGgIoBAA", "Domination Elementalist") %}
+    {% include "_template_code_card.html" %}
+    {% endwith %}
+
+    {% with tc_data = decode_gw1_template("OgWjIwDLrNnAcqpb6lDyAEBNAA", "Domination Devish") %}
+    {% include "_template_code_card.html" %}
+    {% endwith %}
+
+    {% with tc_data = decode_gw1_template("OAVTI2yaw5EgTNdDhcQVtKgGAA", "Domination Necro") %}
+    {% include "_template_code_card.html" %}
+    {% endwith %}
+
+    <h4>Healer</h4>
+
+    {% with tc_data = decode_gw1_template("OwUUMu2+U4RaENg1DBE3VTfbaZAA", "Healer") %}
+    {% include "_template_code_card.html" %}
+    {% endwith %}
+
+    <h4>BiP Necro</h4>
+
+    {% with tc_data = decode_gw1_template("OAhjQkGZIP3hhmwrqKNncDzqH", "BiP Necro") %}
+    {% include "_template_code_card.html" %}
+    {% endwith %}
+
+    <h4>SoS Spirit Spammer</h4>
+
+    {% with tc_data = decode_gw1_template("OACjAqiMJOVzrZ5Ej9NPbQzLGA", "SoS Ritualist") %}
+    {% include "_template_code_card.html" %}
+    {% endwith %}
+    
+    {% with tc_data = decode_gw1_template("OwgiAyi8UNvmlTM2Z7bCNvYA", "SoS Monk") %}
+    {% include "_template_code_card.html" %}
+    {% endwith %}
+    
+    {% with tc_data = decode_gw1_template("OgiiAyi8UNvmlTM238sBNvYA", "SoS Dervish") %}
+    {% include "_template_code_card.html" %}
+    {% endwith %}
+    
+    {% with tc_data = decode_gw1_template("OggjcNgsIPVzrZ5Ej9NPbQzLGA", "SoS Ranger") %}
+    {% include "_template_code_card.html" %}
+    {% endwith %}
+</article>
+{% endblock %}
