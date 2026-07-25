@@ -82,3 +82,9 @@ table.template_code_card a.skill img {
     border: var(--pico-border-width) solid var(--pico-secondary-border);
     border-radius: var(--pico-border-radius);
 }
+
+.gear {
+    font-size: 0.9rem;
+    margin-top: -10px;
+    margin-left: 19px;
+}
