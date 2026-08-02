@@ -28,6 +28,10 @@ p.mb-0 {
     margin-bottom: 0;
 }
 
+.table-fixed {
+    table-layout: fixed;
+}
+
 /*
  * Header title
  */
@@ -67,14 +71,6 @@ article.om-card {
 /*
  * Build table
  */
-table.build {
-    table-layout: fixed;
-}
-
-table.build td {
-    vertical-align: top;
-}
-
 table.build img {
     width: 1.5rem;
 }
