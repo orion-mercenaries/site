@@ -48,6 +48,15 @@ nav.builds li {
 }
 
 /*
+ * Layout
+ */
+@media (min-width: 768px) {
+  .grid-2-3 {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+/*
  * OM card (picocss card with nice border)
  */
 article.om-card {
